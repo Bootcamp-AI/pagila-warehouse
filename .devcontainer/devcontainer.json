@@ -1,12 +1,25 @@
 {
-  "name": "BAI Env",
-  // ... otras configuraciones
+  "name": "BAI env",
+  // Usar una imagen base de Python (puedes ajustarla según sea necesario)
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11", 
+  
+  // Agregar la característica de PostgreSQL
   "features": {
     "ghcr.io/itsmechlark/features/postgresql:1": {
-      "version": "latest",
-      "username": "postgres",
-      "password": "password", 
-      "dbName": "postgres"
+      "version": "latest" 
+      // Puedes especificar la versión si lo deseas, por ejemplo, "15"
+    }
+  },
+  
+  // Instalar paquetes de Python necesarios para Jupyter
+  "postCreateCommand": "pip install jupyterlab notebook ipython-sql",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
     }
   }
 }
