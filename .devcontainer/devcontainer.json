@@ -1,0 +1,12 @@
+{
+  "name": "BAI Env",
+  // ... otras configuraciones
+  "features": {
+    "ghcr.io/itsmechlark/features/postgresql:1": {
+      "version": "latest",
+      "username": "postgres",
+      "password": "password", 
+      "dbName": "postgres"
+    }
+  }
+}
