@@ -1,4 +1,20 @@
 {
+  "name": "BAI Env",
+  // ... otras configuraciones
+  "features": {
+    "ghcr.io/itsmechlark/features/postgresql:1": {
+      "version": "latest",
+      "username": "postgres",
+      "password": "password", 
+      "dbName": "postgres"
+    }
+  }
+}
+
+
+// .devcontainer/devcontainer.json
+/*
+{
   "name": "BAI env",
   // Usar una imagen base de Python (puedes ajustarla según sea necesario)
   "image": "mcr.microsoft.com/devcontainers/python:0-3.11", 
@@ -23,3 +39,4 @@
     }
   }
 }
+*/
